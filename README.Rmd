@@ -29,14 +29,13 @@ if (!interactive()) {
 <!-- badges: start -->
 [![Lifecycle: experimental][life_badge]][life_link]
 [![CRAN status][cran_badge]][cran_link]
-[![Codecov test coverage][cov_badge]][cov_link]
 ![Downloads][dl_badge]
 [![R build status][ga_badge]][ga_link]
-[![Codecov test coverage](https://codecov.io/gh/kiernann/ffplot/branch/master/graph/badge.svg)](https://codecov.io/gh/kiernann/ffplot?branch=master)
+[![Codecov test coverage][cov_badge]][cov_link]
 <!-- badges: end -->
 
-The goal of ffplot is to easily visualize the data scraped from the 
-[ESPN API][api], via the [fflr] package, using the [ggplot2] tools.
+The goal of ffplot is to visualize fantasy football data from ESPN and [fflr]
+using [ggplot2].
 
 ## Installation
 
@@ -49,12 +48,18 @@ remotes::install_github("kiernann/ffplot")
 
 ## Usage
 
-All ffplot functions take take from the fflr package.
+All ffplot functions take data frames from the [fflr] package.
 
 ```{r team_points}
 library(fflr)
 library(ffplot)
-team_points(league_standings(252353))
+x <- league_standings(252353)
+tmp <- tempfile(fileext = ".png")
+standings_change(x, filename = tmp)
+```
+
+```{r echo=FALSE}
+knitr::include_graphics(tmp)
 ```
 
 <!-- refs: start -->
@@ -64,7 +69,7 @@ team_points(league_standings(252353))
 [cran_link]: https://CRAN.R-project.org/package=ffplot
 [ga_badge]: https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg
 [ga_link]: https://github.com/kiernann/ffplot/actions
-[cov_badge]: https://img.shields.io/codecov/c/github/kiernann/ffplot/master.svg
+[cov_badge]: https://codecov.io/gh/kiernann/ffplot/branch/master/graph/badge.svg
 [cov_link]: https://codecov.io/gh/kiernann/ffplot?branch=master
 [dl_badge]: https://cranlogs.r-pkg.org/badges/grand-total/ffplot
 [api]: https://fantasy.espn.com/apis/v3/games/ffplot/

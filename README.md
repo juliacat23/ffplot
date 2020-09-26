@@ -9,8 +9,6 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ffplot)](https://CRAN.R-project.org/package=ffplot)
-[![Codecov test
-coverage](https://img.shields.io/codecov/c/github/kiernann/ffplot/master.svg)](https://codecov.io/gh/kiernann/ffplot?branch=master)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ffplot) [![R
 build
 status](https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg)](https://github.com/kiernann/ffplot/actions)
@@ -18,10 +16,9 @@ status](https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg)](htt
 coverage](https://codecov.io/gh/kiernann/ffplot/branch/master/graph/badge.svg)](https://codecov.io/gh/kiernann/ffplot?branch=master)
 <!-- badges: end -->
 
-The goal of ffplot is to easily visualize the data scraped from the
-[ESPN API](https://fantasy.espn.com/apis/v3/games/ffplot/), via the
-[fflr](https://github.com/kiernann/fflr) package, using the
-[ggplot2](github.com/tidyverse/ggplot2) tools.
+The goal of ffplot is to visualize fantasy football data from ESPN and
+[fflr](https://github.com/kiernann/fflr) using
+[ggplot2](github.com/tidyverse/ggplot2).
 
 ## Installation
 
@@ -35,15 +32,18 @@ remotes::install_github("kiernann/ffplot")
 
 ## Usage
 
-All ffplot functions take take from the fflr package.
+All ffplot functions take data frames from the
+[fflr](https://github.com/kiernann/fflr) package.
 
 ``` r
 library(fflr)
 library(ffplot)
-team_points(league_standings(252353))
+x <- league_standings(252353)
+tmp <- tempfile(fileext = ".png")
+standings_change(x, filename = tmp)
 ```
 
-<img src="man/figures/README-team_points-1.png" width="100%" />
+<img src="/tmp/RtmpsQg10i/file6fc0b24185a60.png" width="100%" />
 
 <!-- refs: start -->
 
