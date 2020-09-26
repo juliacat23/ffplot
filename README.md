@@ -9,11 +9,10 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ffplot)](https://CRAN.R-project.org/package=ffplot)
-![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ffplot) [![R
-build
-status](https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg)](https://github.com/kiernann/ffplot/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/kiernann/ffplot/branch/master/graph/badge.svg)](https://codecov.io/gh/kiernann/ffplot?branch=master)
+[![R build
+status](https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg)](https://github.com/kiernann/ffplot/actions)
 <!-- badges: end -->
 
 The goal of ffplot is to visualize fantasy football data from ESPN and
