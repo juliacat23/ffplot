@@ -76,7 +76,7 @@
 <a href="#ffplot" class="anchor"></a>ffplot</h1></div>
 <!-- badges: start -->
 
-<p>The goal of ffplot is to easily visualize the data scraped from the <a href="https://fantasy.espn.com/apis/v3/games/ffplot/">ESPN API</a>, via the <a href="https://github.com/kiernann/fflr">fflr</a> package, using the <a href="github.com/tidyverse/ggplot2">ggplot2</a> tools.</p>
+<p>The goal of ffplot is to visualize fantasy football data from ESPN and <a href="https://github.com/kiernann/fflr">fflr</a> using <a href="github.com/tidyverse/ggplot2">ggplot2</a>.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -88,12 +88,14 @@
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>All ffplot functions take take from the fflr package.</p>
+<p>All ffplot functions take data frames from the <a href="https://github.com/kiernann/fflr">fflr</a> package.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/kiernann/fflr">fflr</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/kiernann/ffplot">ffplot</a></span><span class="op">)</span>
-<span class="fu"><a href="reference/team_points.html">team_points</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/fflr/man/league_standings.html">league_standings</a></span><span class="op">(</span><span class="fl">252353</span><span class="op">)</span><span class="op">)</span></pre></div>
-<p><img src="reference/figures/README-team_points-1.png" width="100%"></p>
+<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/fflr/man/league_standings.html">league_standings</a></span><span class="op">(</span><span class="fl">252353</span><span class="op">)</span>
+<span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".png"</span><span class="op">)</span>
+<span class="fu"><a href="reference/standings_change.html">standings_change</a></span><span class="op">(</span><span class="va">x</span>, filename <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></pre></div>
+<p><img src="/tmp/RtmpsQg10i/file6fc0b24185a60.png" width="100%"></p>
 <!-- refs: start -->
 <!-- refs: end -->
 </div>
@@ -129,7 +131,6 @@
 <ul class="list-unstyled">
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 <li><a href="https://CRAN.R-project.org/package=ffplot"><img src="https://www.r-pkg.org/badges/version/ffplot" alt="CRAN status"></a></li>
-<li><a href="https://codecov.io/gh/kiernann/ffplot?branch=master"><img src="https://img.shields.io/codecov/c/github/kiernann/ffplot/master.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://github.com/kiernann/ffplot/actions"><img src="https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://codecov.io/gh/kiernann/ffplot?branch=master"><img src="https://codecov.io/gh/kiernann/ffplot/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>

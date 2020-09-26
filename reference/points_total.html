@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • ffplot</title>
+<title>Add together two numbers — points_total • ffplot</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Add together two numbers — points_total" />
+<meta property="og:description" content="Add together two numbers" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -110,26 +111,39 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/kiernann/ffplot/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Add together two numbers</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kiernann/ffplot/blob/master/R/points-total.R'><code>R/points-total.R</code></a></small>
+    <div class="hidden name"><code>points_total.Rd</code></div>
     </div>
 
-    <div id="ffplot-0009000" class="section level1">
-<h1 class="page-header" data-toc-text="0.0.0.9000">
-<a href="#ffplot-0009000" class="anchor"></a>ffplot 0.0.0.9000</h1>
-<ul>
-<li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
-<li>Create <code>team_points()</code> for a simple bar chart.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Add together two numbers</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>points_total</span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>data</th>
+      <td><p>The data frame from <code><a href='https://rdrr.io/pkg/fflr/man/league_standings.html'>fflr::league_standings()</a></code>.</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A ggplot bar chart object.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>points_total</span><span class='op'>(</span><span class='fu'>fflr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/fflr/man/league_standings.html'>league_standings</a></span><span class='op'>(</span><span class='fl'>252353</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='points_total-1.png' alt='' width='700' height='433' /></div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 
