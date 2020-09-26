@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -7,10 +9,19 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  fig.height = 4,
+  fig.width = 9,
+  out.width = "100%",
+  dpi = 300
 )
+if (!interactive()) {
+  options(width = 99)
+}
 ```
 
 # ffplot
@@ -21,6 +32,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage][cov_badge]][cov_link]
 ![Downloads][dl_badge]
 [![R build status][ga_badge]][ga_link]
+[![Codecov test coverage](https://codecov.io/gh/kiernann/ffplot/branch/master/graph/badge.svg)](https://codecov.io/gh/kiernann/ffplot?branch=master)
 <!-- badges: end -->
 
 The goal of ffplot is to easily visualize the data scraped from the 
@@ -33,6 +45,16 @@ You can install the development version of ffplot from [GitHub][ffplot] with:
 ```{r eval=FALSE}
 # install.packages("remotes")
 remotes::install_github("kiernann/ffplot")
+```
+
+## Usage
+
+All ffplot functions take take from the fflr package.
+
+```{r team_points}
+library(fflr)
+library(ffplot)
+team_points(league_standings(252353))
 ```
 
 <!-- refs: start -->

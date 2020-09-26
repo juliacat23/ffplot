@@ -14,6 +14,8 @@ coverage](https://img.shields.io/codecov/c/github/kiernann/ffplot/master.svg)](h
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ffplot) [![R
 build
 status](https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg)](https://github.com/kiernann/ffplot/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/kiernann/ffplot/branch/master/graph/badge.svg)](https://codecov.io/gh/kiernann/ffplot?branch=master)
 <!-- badges: end -->
 
 The goal of ffplot is to easily visualize the data scraped from the
@@ -30,6 +32,18 @@ You can install the development version of ffplot from
 # install.packages("remotes")
 remotes::install_github("kiernann/ffplot")
 ```
+
+## Usage
+
+All ffplot functions take take from the fflr package.
+
+``` r
+library(fflr)
+library(ffplot)
+team_points(league_standings(252353))
+```
+
+<img src="man/figures/README-team_points-1.png" width="100%" />
 
 <!-- refs: start -->
 
