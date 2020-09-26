@@ -50,16 +50,11 @@ remotes::install_github("kiernann/ffplot")
 
 All ffplot functions take data frames from the [fflr] package.
 
-```{r team_points}
+```{r team_points, fig.height=4, fig.width=7, dpi=320}
 library(fflr)
 library(ffplot)
 x <- league_standings(252353)
-tmp <- tempfile(fileext = ".png")
-standings_change(x, filename = tmp)
-```
-
-```{r echo=FALSE}
-knitr::include_graphics(tmp)
+standings_change(x)
 ```
 
 <!-- refs: start -->

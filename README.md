@@ -39,11 +39,10 @@ All ffplot functions take data frames from the
 library(fflr)
 library(ffplot)
 x <- league_standings(252353)
-tmp <- tempfile(fileext = ".png")
-standings_change(x, filename = tmp)
+standings_change(x)
 ```
 
-<img src="/tmp/RtmpsQg10i/file6fc0b24185a60.png" width="100%" />
+<img src="man/figures/README-team_points-1.png" width="100%" />
 
 <!-- refs: start -->
 
