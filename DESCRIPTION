@@ -17,7 +17,10 @@ Imports:
     scales (>= 1.1.1)
 Suggests: 
     covr (>= 3.5.0),
-    testthat (>= 2.3.2)
+    testthat (>= 2.3.2),
+    fflr (>= 0.2.0)
+Remotes: 
+    kiernann/fflr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
