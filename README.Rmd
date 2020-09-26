@@ -1,0 +1,53 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ffplot
+
+<!-- badges: start -->
+[![Lifecycle: experimental][life_badge]][life_link]
+[![CRAN status][cran_badge]][cran_link]
+[![Codecov test coverage][cov_badge]][cov_link]
+![Downloads][dl_badge]
+[![R build status][ga_badge]][ga_link]
+<!-- badges: end -->
+
+The goal of ffplot is to easily visualize the data scraped from the 
+[ESPN API][api], via the [fflr] package, using the [ggplot2] tools.
+
+## Installation
+
+You can install the development version of ffplot from [GitHub][ffplot] with:
+
+```{r eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("kiernann/ffplot")
+```
+
+<!-- refs: start -->
+[life_badge]: https://img.shields.io/badge/lifecycle-experimental-orange.svg
+[life_link]: https://www.tidyverse.org/lifecycle/#experimental
+[cran_badge]: https://www.r-pkg.org/badges/version/ffplot
+[cran_link]: https://CRAN.R-project.org/package=ffplot
+[ga_badge]: https://github.com/kiernann/ffplot/workflows/R-CMD-check/badge.svg
+[ga_link]: https://github.com/kiernann/ffplot/actions
+[cov_badge]: https://img.shields.io/codecov/c/github/kiernann/ffplot/master.svg
+[cov_link]: https://codecov.io/gh/kiernann/ffplot?branch=master
+[dl_badge]: https://cranlogs.r-pkg.org/badges/grand-total/ffplot
+[api]: https://fantasy.espn.com/apis/v3/games/ffplot/
+[fflr]: https://github.com/kiernann/fflr
+[ggplot2]: github.com/tidyverse/ggplot2
+[ffplot]: https://github.com/kiernann/ffplot
+[coc]: https://contributor-covenant.org/version/1/0/0/CODE_OF_CONDUCT.html
+<!-- refs: end -->
