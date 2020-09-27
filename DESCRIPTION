@@ -18,7 +18,8 @@ Imports:
     ggplot2 (>= 3.3.2),
     rlang (>= 0.4.7),
     scales (>= 1.1.1),
-    tidyr (>= 1.1.2)
+    tidyr (>= 1.1.2),
+    stats
 Suggests: 
     covr (>= 3.5.0),
     fflr (>= 0.2.0),
