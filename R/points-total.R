@@ -9,8 +9,8 @@
 #' @export
 points_total <- function(data) {
   long <- data.frame(
-    abbrev = rep(data$abbrev, 2),
-    points = c(data$points, data$against),
+    abbrev = rep(abbrev, 2),
+    points = c(points, data$against),
     type = factor(
       x = rep(c("For", "Against"), each = nrow(data)),
       levels = c("For", "Against")
